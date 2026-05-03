@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54af3789-b3c2-437b-9bc0-2b83db8a54f3" name="Changes" comment="Add Login form page">
-      <change afterPath="$PROJECT_DIR$/config/packages/twig_component.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/easyadmin.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/dashboard.html.twig" afterDir="false" />
+    <list default="true" id="54af3789-b3c2-437b-9bc0-2b83db8a54f3" name="Changes" comment="Add administration">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/reference.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/reference.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +229,7 @@
       <option name="presentableId" value="Default" />
       <updated>1777806041151</updated>
       <workItem from="1777806042158" duration="6095000" />
-      <workItem from="1777813379769" duration="6917000" />
+      <workItem from="1777813379769" duration="10286000" />
     </task>
     <task id="LOCAL-00001" summary="Add idea config">
       <option name="closed" value="true" />
@@ -296,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777818680534</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add administration">
+      <option name="closed" value="true" />
+      <created>1777822326754</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1777822326754</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +320,8 @@
     <MESSAGE value="Add relations to all entities" />
     <MESSAGE value="Add the __toString() method to all entities for the select inputs that will appear later in the dashboard." />
     <MESSAGE value="Add Login form page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Login form page" />
+    <MESSAGE value="Add administration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add administration" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
