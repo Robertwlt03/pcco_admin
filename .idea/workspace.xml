@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54af3789-b3c2-437b-9bc0-2b83db8a54f3" name="Changes" comment="Add user entity">
+    <list default="true" id="54af3789-b3c2-437b-9bc0-2b83db8a54f3" name="Changes" comment="Add customer entity">
+      <change afterPath="$PROJECT_DIR$/src/Enum/Status.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e0781108-5eb0-42f6-b2da-468647d9e936.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e0781108-5eb0-42f6-b2da-468647d9e936.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Enum/UserRole.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enum/UserRole.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +171,9 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
     </include_path>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3,
   &quot;fromUser&quot;: false
@@ -188,6 +197,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/robertwalter/PhpstormProjects/pcco_admin",
+    "settings.editor.selected.configurable": "SQL Dialects",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -211,7 +221,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1777806041151</updated>
-      <workItem from="1777806042158" duration="4121000" />
+      <workItem from="1777806042158" duration="6095000" />
     </task>
     <task id="LOCAL-00001" summary="Add idea config">
       <option name="closed" value="true" />
@@ -229,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777809718898</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add customer entity">
+      <option name="closed" value="true" />
+      <created>1777810360586</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1777810360586</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +267,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add idea config" />
     <MESSAGE value="Add user entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add user entity" />
+    <MESSAGE value="Add customer entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add customer entity" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
