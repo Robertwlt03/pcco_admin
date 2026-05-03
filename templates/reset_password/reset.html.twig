@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'Reset your password'|trans }}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+{% endblock %}
+
+{% block body %}
+    <main class="login-container">
+        <div class="logo-wrapper">
+            <img src="/images/pcco-logo.svg" alt="PC CADDIE">
+        </div>
+
+        {{ form_start(resetForm) }}
+        <h1 class="login-title">{{ 'New Password'|trans }}</h1>
+
+        {# Anzeige von globalen Formularfehlern (z.B. Passwörter stimmen nicht überein) #}
+        {% if not resetForm.vars.valid %}
+            <div class="alert-box" style="background: #fde8e8; color: #9b1c1c; border: 1px solid #f8b4b4; margin-bottom: 20px;">
+                <i class="fas fa-times-circle"></i>
+                <div style="text-align: left;">
+                    {{ form_errors(resetForm) }}
+                    {{ form_errors(resetForm.plainPassword.first) }}
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="form-group">
+            <label class="field-label">{{ 'Enter your new password'|trans }}</label>
+            <div class="input-wrapper">
+                <i class="fas fa-key"></i>
+                {{ form_widget(resetForm.plainPassword.first, {
+                    'attr': {'placeholder': 'New password'}
+                }) }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="field-label">{{ 'Repeat password'|trans }}</label>
+            <div class="input-wrapper">
+                <i class="fas fa-key"></i>
+                {{ form_widget(resetForm.plainPassword.second, {
+                    'attr': {'placeholder': 'Repeat password'}
+                }) }}
+            </div>
+        </div>
+
+        <button type="submit" class="btn-submit">{{ 'Reset password'|trans }}</button>
+        {{ form_end(resetForm) }}
+    </main>
+{% endblock %}

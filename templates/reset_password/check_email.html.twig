@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'Email Sent'|trans }}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+{% endblock %}
+
+{% block body %}
+    <main class="login-container">
+        <div class="logo-wrapper">
+            <img src="/images/pcco-logo.svg" alt="PC CADDIE">
+        </div>
+
+        <h1 class="login-title">{{ 'Email Sent'|trans }}</h1>
+
+        <div class="alert-box" style="background: #e1f0da; color: #3d5a2d; border: 1px solid #bcd9ad; margin-bottom: 25px;">
+            <i class="fas fa-check-circle"></i>
+            <span>{{ 'If an account matching your email exists, then an email was just sent...'|trans }}</span>
+        </div>
+
+        <p style="font-size: 0.9rem; color: #6b7280; text-align: left; margin-bottom: 20px;">
+            {{ 'This link will expire in'|trans }} {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.
+        </p>
+
+        <p style="font-size: 0.85rem; color: #6b7280; text-align: left;">
+            {{ "If you don't receive an email please check your spam folder or"|trans }}
+            <a href="{{ path('app_forgot_password_request') }}" class="forgot-link">{{ 'try again'|trans }}</a>.
+        </p>
+
+        <div class="langs" style="margin-top: 30px;">
+            <a href="{{ path('app_login') }}" class="forgot-link">
+                <i class="fas fa-arrow-left"></i> {{ 'Back to login'|trans }}
+            </a>
+        </div>
+    </main>
+{% endblock %}

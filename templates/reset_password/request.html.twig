@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'Reset your password'|trans }}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+{% endblock %}
+
+{% block body %}
+    <main class="login-container">
+        <div class="logo-wrapper">
+            <img src="/images/pcco-logo.svg" alt="PC CADDIE">
+        </div>
+
+        {{ form_start(requestForm) }}
+        <h1 class="login-title">{{ 'Reset your password'|trans }}</h1>
+
+        {% for flash_error in app.flashes('reset_password_error') %}
+            <div class="alert-box" style="background: #fde8e8; color: #9b1c1c; border: 1px solid #f8b4b4; margin-bottom: 20px;">
+                <i class="fas fa-times-circle"></i>
+                <span>{{ flash_error }}</span>
+            </div>
+        {% endfor %}
+
+        <p style="margin-bottom: 20px; font-size: 0.9rem; color: #6b7280; text-align: left;">
+            {{ 'Enter your email address and we will send you a link to reset your password'|trans }}
+        </p>
+
+        <div class="form-group">
+            <label for="{{ requestForm.email.vars.id }}" class="field-label">{{ 'Email'|trans }}</label>
+            <div class="input-wrapper">
+                <i class="fas fa-envelope"></i>
+                {{ form_widget(requestForm.email, {
+                    'attr': {'class': '', 'placeholder': 'email@example.com'}
+                }) }}
+            </div>
+        </div>
+
+        <button type="submit" class="btn-submit">{{ 'Send reset link'|trans }}</button>
+        {{ form_end(requestForm) }}
+
+        <div class="langs" style="margin-top: 20px;">
+            <a href="{{ path('app_login') }}" class="forgot-link">
+                <i class="fas fa-arrow-left"></i> {{ 'Back to login'|trans }}
+            </a>
+        </div>
+    </main>
+{% endblock %}
