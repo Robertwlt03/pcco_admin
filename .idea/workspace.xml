@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54af3789-b3c2-437b-9bc0-2b83db8a54f3" name="Changes" comment="Add administration">
+    <list default="true" id="54af3789-b3c2-437b-9bc0-2b83db8a54f3" name="Changes" comment="Add access control (only user allowed) and login remember duration">
+      <change afterPath="$PROJECT_DIR$/src/EventListener/LocaleSubscriber.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/messages.de.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/messages.en.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +203,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/robertwalter/PhpstormProjects/pcco_admin/public",
+    "last_opened_file_path": "/Users/robertwalter/PhpstormProjects/pcco_admin/src",
     "settings.editor.selected.configurable": "SQL Dialects",
     "vue.rearranger.settings.migration": "true"
   },
@@ -209,6 +215,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/translations" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/assets/styles" />
     </key>
@@ -229,7 +237,7 @@
       <option name="presentableId" value="Default" />
       <updated>1777806041151</updated>
       <workItem from="1777806042158" duration="6095000" />
-      <workItem from="1777813379769" duration="10286000" />
+      <workItem from="1777813379769" duration="13668000" />
     </task>
     <task id="LOCAL-00001" summary="Add idea config">
       <option name="closed" value="true" />
@@ -295,7 +303,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777822326754</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add access control (only user allowed) and login remember duration">
+      <option name="closed" value="true" />
+      <created>1777825538508</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1777825538508</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +337,8 @@
     <MESSAGE value="Add the __toString() method to all entities for the select inputs that will appear later in the dashboard." />
     <MESSAGE value="Add Login form page" />
     <MESSAGE value="Add administration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add administration" />
+    <MESSAGE value="Add access control (only user allowed) and login remember duration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add access control (only user allowed) and login remember duration" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
