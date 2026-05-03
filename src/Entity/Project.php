@@ -21,7 +21,7 @@ class Project
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
 
-    #[ORM\Column]
+    #[ORM\Column(length: 255)]
     private ?string $status = null;
 
     #[ORM\Column(type: Types::DECIMAL, precision: 12, scale: 2)]
