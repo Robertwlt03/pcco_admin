@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54af3789-b3c2-437b-9bc0-2b83db8a54f3" name="Changes" comment="Add the __toString() method to all entities for the select inputs that will appear later in the dashboard.">
-      <change afterPath="$PROJECT_DIR$/public/images/flags/de.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/flags/en.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/pcco-bg-layer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/pcco-logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+    <list default="true" id="54af3789-b3c2-437b-9bc0-2b83db8a54f3" name="Changes" comment="Add Login form page">
+      <change afterPath="$PROJECT_DIR$/config/packages/twig_component.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/routes/easyadmin.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/dashboard.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/reference.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/reference.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,6 +174,11 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
       <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
       <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/twig/html-extra" />
+      <path value="$PROJECT_DIR$/vendor/symfony/uid" />
+      <path value="$PROJECT_DIR$/vendor/symfony/ux-twig-component" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-uuid" />
+      <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
     </include_path>
   </component>
   <component name="ProblemsViewState">
@@ -231,7 +238,7 @@
       <option name="presentableId" value="Default" />
       <updated>1777806041151</updated>
       <workItem from="1777806042158" duration="6095000" />
-      <workItem from="1777813379769" duration="4417000" />
+      <workItem from="1777813379769" duration="6917000" />
     </task>
     <task id="LOCAL-00001" summary="Add idea config">
       <option name="closed" value="true" />
@@ -281,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777814699737</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add Login form page">
+      <option name="closed" value="true" />
+      <created>1777818680534</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1777818680534</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +320,8 @@
     <MESSAGE value="Add task entity" />
     <MESSAGE value="Add relations to all entities" />
     <MESSAGE value="Add the __toString() method to all entities for the select inputs that will appear later in the dashboard." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add the __toString() method to all entities for the select inputs that will appear later in the dashboard." />
+    <MESSAGE value="Add Login form page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Login form page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
