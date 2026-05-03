@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54af3789-b3c2-437b-9bc0-2b83db8a54f3" name="Changes" comment="Add task entity">
-      <change afterPath="$PROJECT_DIR$/src/Entity/Task.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/TaskRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/data_source_mapping.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/laravel-idea.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e0781108-5eb0-42f6-b2da-468647d9e936.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e0781108-5eb0-42f6-b2da-468647d9e936.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Customer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Task.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +36,12 @@
     &quot;assignee&quot;: &quot;Robertwlt03&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Robertwlt03/pcco_admin.git",
-    "accountId": "0a2c2cb3-ffa9-45d0-b697-4cae7b07784b"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Robertwlt03/pcco_admin.git&quot;,
+    &quot;accountId&quot;: &quot;0a2c2cb3-ffa9-45d0-b697-4cae7b07784b&quot;
   }
-}]]></component>
+}</component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.4.10/bin/php">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
@@ -219,6 +223,7 @@
       <option name="presentableId" value="Default" />
       <updated>1777806041151</updated>
       <workItem from="1777806042158" duration="6095000" />
+      <workItem from="1777813379769" duration="740000" />
     </task>
     <task id="LOCAL-00001" summary="Add idea config">
       <option name="closed" value="true" />
@@ -244,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777810360586</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add task entity">
+      <option name="closed" value="true" />
+      <created>1777813674181</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1777813674181</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +278,8 @@
     <MESSAGE value="Add idea config" />
     <MESSAGE value="Add user entity" />
     <MESSAGE value="Add customer entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add customer entity" />
+    <MESSAGE value="Add task entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add task entity" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

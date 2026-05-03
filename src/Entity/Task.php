@@ -13,8 +13,12 @@ class Task
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column]
-    private array $assignedTo = [];
+    #[ORM\ManyToOne(targetEntity: Project::class)]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Project $project = null;
+
+    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'tasks')]
+    private ?User $assignedTo = null;
 
     #[ORM\Column(length: 255)]
     private ?string $title = null;
@@ -30,12 +34,24 @@ class Task
         return $this->id;
     }
 
-    public function getAssignedTo(): array
+    public function getProject(): ?Project
+    {
+        return $this->project;
+    }
+
+    public function setProject(?Project $project): static
+    {
+        $this->project = $project;
+
+        return $this;
+    }
+
+    public function getAssignedTo(): ?User
     {
         return $this->assignedTo;
     }
 
-    public function setAssignedTo(array $assignedTo): static
+    public function setAssignedTo(?User $assignedTo): static
     {
         $this->assignedTo = $assignedTo;
 

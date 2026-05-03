@@ -15,6 +15,10 @@ class Project
     #[ORM\Column]
     private ?int $id = null;
 
+    #[ORM\ManyToOne(targetEntity: Customer::class, inversedBy: 'projects')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Customer $customer = null;
+
     #[ORM\Column(length: 255)]
     private ?string $title = null;
 
@@ -30,6 +34,17 @@ class Project
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getCustomer(): ?Customer
+    {
+        return $this->customer;
+    }
+
+    public function setCustomer(?Customer $customer): static
+    {
+        $this->customer = $customer;
+        return $this;
     }
 
     public function getTitle(): ?string
