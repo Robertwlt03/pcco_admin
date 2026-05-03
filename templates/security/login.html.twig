@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'Sign in'|trans }}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+{% endblock %}
+
+{% block body %}
+    <main class="login-container">
+        <div class="logo-wrapper">
+            <img src="/images/pcco-logo.svg" alt="PC CADDIE">
+        </div>
+
+        <form method="post">
+            <h1 class="login-title">{{ 'Login'|trans }}</h1>
+
+            {% if error %}
+                <div class="alert-box">
+                    <i class="fas fa-times-circle"></i>
+                    <span>{{ error.messageKey|trans(error.messageData, 'security') }}</span>
+                </div>
+            {% endif %}
+
+            <div class="form-group">
+                <div class="label-row">
+                    <label for="email" class="field-label">{{ 'Email / User name'|trans }}</label>
+                </div>
+                <div class="input-wrapper">
+                    <i class="fas fa-user"></i>
+                    <input type="email" name="email" id="email" value="{{ last_username }}" required autofocus>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label-row">
+                    <label for="password-field" class="field-label">{{ 'Passwort'|trans }}</label>
+{#                    <a href="{{ path('app_forgot_password_request', {'_locale': app.request.locale}) }}" class="forgot-link">#}
+{#                        {{ 'Forgot Password'|trans }}?#}
+{#                    </a>#}
+                </div>
+                <div class="input-wrapper">
+                    <i class="fas fa-key"></i>
+                    <input type="password" name="password" id="password-field" required>
+                    <i class="fas fa-eye-slash toggle-password" id="togglePassword"></i>
+                </div>
+            </div>
+
+            <div class="remember-me-row">
+                <label>
+                    <input type="checkbox" name="_remember_me"> {{ 'Remember me'|trans }}
+                </label>
+            </div>
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+            <button type="submit" class="btn-submit">{{ 'Login'|trans }}</button>
+        </form>
+
+        <div class="lang-dropdown" id="langDropdown">
+            <div class="lang-selected" onclick="toggleDropdown()">
+                <img src="{{ app.request.locale == 'de' ? '/images/flags/de.png' : '/images/flags/en.png' }}"
+                     class="flag-icon" alt="">
+                <div class="lang-info">
+                    <span class="label">{{ 'Language'|trans }}</span>
+                    <span class="current-lang">{{ app.request.locale == 'de' ? 'Deutsch' : 'English' }}</span>
+                </div>
+                <i class="fas fa-chevron-down chevron"></i>
+            </div>
+
+            <div class="lang-options">
+                <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale': 'de'})) }}"
+                   class="lang-option {{ app.request.locale == 'de' ? 'active' : '' }}">
+                    <img src="/images/flags/de.png" alt="">
+                    <span>Deutsch</span>
+                </a>
+                <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale': 'en'})) }}"
+                   class="lang-option {{ app.request.locale == 'en' ? 'active' : '' }}">
+                    <img src="/images/flags/en.png" alt="">
+                    <span>English</span>
+                </a>
+            </div>
+        </div>
+
+        <script>
+            // Dropdown Logik
+            function toggleDropdown() {
+                document.getElementById('langDropdown').classList.toggle('is-open');
+            }
+
+            window.onclick = function (event) {
+                if (!event.target.closest('#langDropdown')) {
+                    document.getElementById('langDropdown').classList.remove('is-open');
+                }
+            }
+
+            // Passwort-Sichtbarkeit Logik
+            document.addEventListener('DOMContentLoaded', function () {
+                const togglePassword = document.getElementById('togglePassword');
+                const passwordField = document.getElementById('password-field');
+
+                if (togglePassword && passwordField) {
+                    togglePassword.addEventListener('click', function () {
+                        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                        passwordField.setAttribute('type', type);
+
+                        // Icons umschalten
+                        this.classList.toggle('fa-eye-slash');
+                        this.classList.toggle('fa-eye');
+                    });
+                }
+            });
+        </script>
+    </main>
+{% endblock %}
