@@ -1,0 +1,24 @@
+/* assets/styles/dashboard.css */
+:root {
+    --pcco-green: #57A632;
+}
+
+/* Card Styling für Dark/Light */
+.card {
+    background-color: #ffffff;
+    transition: transform 0.2s;
+}
+
+[data-bs-theme="dark"] .card {
+    background-color: #1a1a1a;
+    border: 1px solid #2d2d2d !important;
+}
+
+[data-bs-theme="dark"] .text-muted {
+    color: #a0a0a0 !important;
+}
+
+/* Canvas responsive Anpassung */
+canvas {
+    max-width: 100% !important;
+}
