@@ -42,8 +42,9 @@ class UserCrudController extends AbstractCrudController
             ->setFormTypeOptions([
                 'type' => PasswordType::class,
                 'first_options' => ['label' => 'Passwort'],
-                'second_options' => ['label' => 'Passwort wiederholen'],
-                'invalid_message' => 'Die Passwörter stimmen nicht überein.',
+                'second_options' => ['label' => 'Repeat Password'],
+                'invalid_message' => 'The passwords do not match',
+                'mapped' => false,
             ])
             ->onlyOnForms()
             ->setRequired($pageName === Crud::PAGE_NEW);
@@ -76,11 +77,11 @@ class UserCrudController extends AbstractCrudController
     {
         return $formBuilder->addEventListener(FormEvents::SUBMIT, function (FormEvent $event) use ($plainPassword) {
             $user = $event->getData();
+            $form = $event->getForm();
+            $newPassword = $form->get('password')->getData();
 
-            if (!empty($user->getPassword()) && $user->getPassword() !== $plainPassword) {
-                $user->setPassword($this->passwordHasher->hashPassword($user, $user->getPassword()));
-            } else {
-                $user->setPassword($plainPassword);
+            if (!empty($newPassword) && $newPassword !== $plainPassword) {
+                $user->setPassword($this->passwordHasher->hashPassword($user, $newPassword));
             }
         });
     }

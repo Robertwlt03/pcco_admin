@@ -41,9 +41,15 @@
 'Passwort': 'Password'
 'Language': 'Language'
 'Login': 'Login'
-'Reset your password': 'Reset your password'
 'Enter your email address and we will send you a link to reset your password': 'Enter your email address and we will send you a link to reset your password.'
 'Send reset link': 'Send reset link'
 'Back to login': 'Back to login'
+'Todo': 'To Do'
+'InProgress': 'In Progress'
+'Review': 'Review'
+'Done': 'Done'
+'Repeat Password': 'Repeat Password'
+'Reset your password': 'Reset your password'
+'The passwords do not match': 'The passwords do not match.'
 
 
