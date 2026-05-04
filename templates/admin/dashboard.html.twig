@@ -1,12 +1,64 @@
+{# templates/admin/dashboard.html.twig #}
 {% extends '@EasyAdmin/page/content.html.twig' %}
 
-{% block content_title %}Willkommen in der Test-Administration!{% endblock %}
-
 {% block main %}
-    <p>Dies ist ein Demo-Projekt zur Evaluation von EasyAdmin.</p>
-    <ul>
-        <li>Nutze die Sidebar, um Daten zu verwalten.</li>
-        <li>Teste den Sprachumschalter oben rechts.</li>
-        <li>Melde dich als "Manager" an, um zu sehen, wie die Benutzer-Verwaltung verschwindet.</li>
-    </ul>
+    <div class="dashboard-viewport">
+        <div class="row g-3 mb-4">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="stat-label">{{ 'Projects'|trans }}</div>
+                    <div class="stat-value">{{ totalProjects }}</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="stat-label">{{ 'Tasks'|trans }}</div>
+                    <div class="stat-value">{{ totalTasks }}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-3">
+            <div class="col-lg-4">
+                <div class="card">
+                    <h6 class="fw-bold mb-3">{{ 'Status'|trans }}</h6>
+                    <div style="position: relative; height: 220px;">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                            <span class="d-block fw-bold fs-4">{{ totalProjects }}</span>
+                            <small class="text-muted text-uppercase" style="font-size: 0.5rem;">{{ 'Total'|trans }}</small>
+                        </div>
+                        {{ render_chart(statusChart) }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="card">
+                    <h6 class="fw-bold mb-3">{{ 'Project Progress'|trans }}</h6>
+                    <div style="max-height: 220px; overflow-y: auto;">
+                        {% for project in projects %}
+                            <div class="project-list-item">
+                                <div class="d-flex justify-content-between small mb-1">
+                                    <span>{{ project.name }}</span>
+                                    <span>{{ project.percentage }}%</span>
+                                </div>
+                                <div class="progress" style="height: 4px;">
+                                    <div class="progress-bar bg-success" style="width: {{ project.percentage }}%"></div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="card">
+                    <h6 class="fw-bold mb-3">{{ 'Budget per Customer'|trans }}</h6>
+                    <div style="height: 250px;">
+                        {{ render_chart(budgetChart) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
