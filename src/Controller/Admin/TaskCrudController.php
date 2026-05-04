@@ -3,9 +3,11 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Task;
+use App\Enum\Status;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
 class TaskCrudController extends AbstractCrudController
@@ -15,14 +17,21 @@ class TaskCrudController extends AbstractCrudController
         return Task::class;
     }
 
-    /*
     public function configureFields(string $pageName): iterable
     {
+        $statusChoices = [];
+        foreach (Status::cases() as $status) {
+            $statusChoices[$status->name] = $status->value;
+        }
+
         return [
-            IdField::new('id'),
             TextField::new('title'),
-            TextEditorField::new('description'),
+            DateTimeField::new('deadline'),
+            ChoiceField::new('status')
+                ->setChoices($statusChoices)
+                ->renderAsBadges(),
+            AssociationField::new('project'),
+            AssociationField::new('assignedTo'),
         ];
     }
-    */
 }
