@@ -18,6 +18,7 @@ class Task
     private ?Project $project = null;
 
     #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'tasks')]
+    #[ORM\JoinColumn(onDelete: 'SET NULL')]
     private ?User $assignedTo = null;
 
     #[ORM\Column(length: 255)]

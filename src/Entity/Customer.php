@@ -15,7 +15,7 @@ class Customer
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\OneToMany(targetEntity: Project::class, mappedBy: 'customer')]
+    #[ORM\OneToMany(targetEntity: Project::class, mappedBy: 'customer', cascade: ['remove'])]
     private Collection $projects;
 
     #[ORM\Column(length: 255)]

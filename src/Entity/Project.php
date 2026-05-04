@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Enum\Status;
 use App\Repository\ProjectRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -14,6 +16,9 @@ class Project
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
+
+    #[ORM\OneToMany(targetEntity: Task::class, mappedBy: 'project', cascade: ['remove'])]
+    private Collection $tasks;
 
     #[ORM\ManyToOne(targetEntity: Customer::class, inversedBy: 'projects')]
     #[ORM\JoinColumn(nullable: false)]
@@ -30,6 +35,11 @@ class Project
 
     #[ORM\Column(type: Types::DECIMAL, precision: 12, scale: 2)]
     private ?string $budget = null;
+
+    public function __construct()
+    {
+        $this->tasks = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
